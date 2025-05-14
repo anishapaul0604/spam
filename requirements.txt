@@ -1,4 +1,4 @@
-altgraph @ file:///AppleInternal/Library/BuildRoots/bcce998f-ff34-11ef-9d34-f2a857e00a32/Library/Caches/com.apple.xbs/Sources/python3/altgraph-0.17.2-py2.py3-none-any.whl
+altgraph==0.17.2
 appnope==0.1.4
 asttokens==2.4.1
 blinker==1.9.0
@@ -13,7 +13,7 @@ exceptiongroup==1.2.2
 executing==2.1.0
 Flask==3.1.0
 fonttools==4.55.0
-future @ file:///AppleInternal/Library/BuildRoots/bcce998f-ff34-11ef-9d34-f2a857e00a32/Library/Caches/com.apple.xbs/Sources/python3/future-0.18.2-py3-none-any.whl
+future==0.18.2
 gunicorn==23.0.0
 importlib_metadata==8.5.0
 importlib_resources==6.4.5
@@ -27,7 +27,7 @@ jupyter_client==8.6.3
 jupyter_core==5.7.2
 kiwisolver==1.4.7
 lxml==5.3.2
-macholib @ file:///AppleInternal/Library/BuildRoots/bcce998f-ff34-11ef-9d34-f2a857e00a32/Library/Caches/com.apple.xbs/Sources/python3/macholib-1.15.2-py2.py3-none-any.whl
+macholib==1.15.2
 MarkupSafe==3.0.2
 matplotlib==3.9.2
 matplotlib-inline==0.1.7
@@ -55,7 +55,7 @@ pyzmq==26.2.0
 regex==2024.11.6
 scikit-learn==1.6.1
 scipy==1.13.1
-six @ file:///AppleInternal/Library/BuildRoots/bcce998f-ff34-11ef-9d34-f2a857e00a32/Library/Caches/com.apple.xbs/Sources/python3/six-1.15.0-py2.py3-none-any.whl
+six==1.15.0
 sklearn==0.0
 stack-data==0.6.3
 threadpoolctl==3.6.0
