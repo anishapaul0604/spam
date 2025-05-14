@@ -1,0 +1,273 @@
+{% extends "base.html" %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About | Spam Detector</title>
+  <!-- Bootstrap CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <style>
+    
+    .hero-section {
+      background: linear-gradient(to right, #6a11cb, #2575fc);
+      color: white;
+      padding: 100px 20px;
+      text-align: center;
+    }
+    .hero-section h1 {
+      font-size: 3.5rem;
+      font-weight: 700;
+      animation: fadeInDown 1s ease-in-out;
+    }
+    .hero-section p {
+      font-size: 1.25rem;
+      margin-top: 10px;
+      animation: fadeInUp 1s ease-in-out;
+    }
+    .content-section {
+      padding: 60px 20px;
+    }
+    .content-section h3 {
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+    .content-section p {
+      color: #6c757d;
+      line-height: 1.8;
+    }
+    .content-section .icon-box {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    .content-section .icon-box i {
+      font-size: 2rem;
+      color: #6a11cb;
+      margin-right: 15px;
+    }
+    .faq-section {
+      padding: 60px 20px;
+    }
+    .faq-section h2 {
+      font-weight: bold;
+      margin-bottom: 40px;
+    }
+    .accordion-button {
+      font-weight: 600;
+    }
+    .footer {
+      background-color: #343a40;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+    }
+    .footer p {
+      margin: 0;
+    }
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="container">
+      <h1>About Our Spam Detection</h1>
+      <p>Learn more about how our technology helps keep your inbox clean.</p>
+    </div>
+  </section>
+
+  <!-- Content Section -->
+  <section class="content-section">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-6">
+          <h3>Our Mission</h3>
+          <div class="icon-box">
+            <i class="fas fa-bullseye"></i>
+            <p>
+              We aim to provide a fast, reliable, and intelligent way to detect spam messages. Whether it's email, text, or chat — our goal is to reduce unwanted content and make digital communication safer for everyone.
+            </p>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <h3>How It Works</h3>
+          <div class="icon-box">
+            <i class="fas fa-cogs"></i>
+            <p>
+              Our system uses machine learning algorithms trained on thousands of spam and non-spam messages. It analyzes the message content in real-time to predict whether it is spam or legitimate — all within a fraction of a second.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+    <!-- Content Section 1 -->
+    <section class="content-section">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-6">
+            <img src="https://img.freepik.com/free-vector/global-data-security-personal-data-security-cyber-data-security-online-concept-illustration-internet-security-information-privacy-protection_1150-37368.jpg?ga=GA1.1.569573288.1743412509&semt=ais_hybrid&w=740" width=500 alt="Analysis" class="img-fluid rounded shadow">
+          </div>
+          <div class="col-md-6">
+            <h2>Why Spam Detection Matters</h2>
+            <p style="text-align: justify;"> 
+              Spam detection plays a crucial role in maintaining the safety, efficiency, and quality of digital communication. Inboxes, chat systems, and online forms are often targeted by unsolicited or malicious content—ranging from annoying advertisements to dangerous phishing attempts and malware.
+  
+  Effective spam detection helps protect users from these threats by filtering out harmful messages before they can cause damage. It reduces the risk of identity theft, fraud, and data breaches, which are commonly spread through deceptive spam content.
+  
+  Beyond security, spam wastes time and clutters inboxes, leading to missed important messages and reduced productivity. By removing irrelevant or harmful content, spam filters improve user experience and ensure communication systems run smoothly.
+  
+  For businesses, spam detection also preserves data integrity, ensures compliance with anti-spam regulations, and protects brand reputation. It prevents spam bots from corrupting customer feedback, form submissions, or analytics with fake or misleading data.
+  
+  In short, spam detection is essential in today’s digital world—not only to guard against cyber threats but also to maintain clean, respectful, and reliable communication channels for individuals and organizations alike.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+  <!-- FAQ Section -->
+  <section class="faq-section bg-light">
+    <div class="container">
+      <h2 class="text-center">Frequently Asked Questions</h2>
+      <div class="accordion" id="faqAccordion">
+        <!-- FAQ 1 -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="faqHeading1">
+            <button
+              class="accordion-button"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#faqCollapse1"
+              aria-expanded="true"
+              aria-controls="faqCollapse1"
+            >
+              What is spam email verification?
+            </button>
+          </h2>
+          <div
+            id="faqCollapse1"
+            class="accordion-collapse collapse show"
+            aria-labelledby="faqHeading1"
+            data-bs-parent="#faqAccordion"
+          >
+            <div class="accordion-body">
+              Spam email verification is the process of analyzing email content to determine whether it is spam or legitimate. It helps protect users from unwanted or harmful messages.
+            </div>
+          </div>
+        </div>
+        <!-- FAQ 2 -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="faqHeading2">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#faqCollapse2"
+              aria-expanded="false"
+              aria-controls="faqCollapse2"
+            >
+              How does your spam detection system work?
+            </button>
+          </h2>
+          <div
+            id="faqCollapse2"
+            class="accordion-collapse collapse"
+            aria-labelledby="faqHeading2"
+            data-bs-parent="#faqAccordion"
+          >
+            <div class="accordion-body">
+              Our system uses advanced machine learning algorithms trained on a large dataset of spam and non-spam messages. It analyzes the content, structure, and metadata of emails to predict whether they are spam.
+            </div>
+          </div>
+        </div>
+        <!-- FAQ 3 -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="faqHeading3">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#faqCollapse3"
+              aria-expanded="false"
+              aria-controls="faqCollapse3"
+            >
+              Is my data secure during the verification process?
+            </button>
+          </h2>
+          <div
+            id="faqCollapse3"
+            class="accordion-collapse collapse"
+            aria-labelledby="faqHeading3"
+            data-bs-parent="#faqAccordion"
+          >
+            <div class="accordion-body">
+              Yes, your data is secure. We prioritize user privacy and ensure that all data is processed securely without being stored or shared with third parties.
+            </div>
+          </div>
+        </div>
+        <!-- FAQ 4 -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="faqHeading4">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#faqCollapse4"
+              aria-expanded="false"
+              aria-controls="faqCollapse4"
+            >
+              Can I integrate your spam detection system into my application?
+            </button>
+          </h2>
+          <div
+            id="faqCollapse4"
+            class="accordion-collapse collapse"
+            aria-labelledby="faqHeading4"
+            data-bs-parent="#faqAccordion"
+          >
+            <div class="accordion-body">
+              Yes, our spam detection system can be integrated into your application using our API. Contact us for more details on how to get started.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+ 
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+{% endblock %}
