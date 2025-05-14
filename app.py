@@ -4,32 +4,36 @@ import re
 import nltk
 from nltk.corpus import stopwords
 
+# Download NLTK data
 nltk.download('stopwords')
 stop_words = set(stopwords.words('english'))
 
 def clean_text(text):
+    """Clean and preprocess text for spam detection"""
     text = re.sub(r'\W', ' ', text)
     text = text.lower()
     text = text.split()
     text = [word for word in text if word not in stop_words]
     return ' '.join(text)
 
+# Load the models
 spam_detector = joblib.load("spam_detector.pkl")
-
 vectorizer = spam_detector['vectorizer']
 nb_model = spam_detector['nb_model']
 lr_model = spam_detector['lr_model']
 rf_model = spam_detector['rf_model']
-clean_text = spam_detector['clean_text']
-
 
 def predict_spam(message):
+    """Predict if a message is spam using multiple models"""
     cleaned_message = clean_text(message)
     vectorized_message = vectorizer.transform([cleaned_message])
+    
+    # Get predictions from all models
     nb_prediction = nb_model.predict(vectorized_message)
     lr_prediction = lr_model.predict(vectorized_message)
     rf_prediction = rf_model.predict(vectorized_message)
     
+    # Get probabilities
     nb_probability = nb_model.predict_proba(vectorized_message)[0][1]
     lr_probability = lr_model.predict_proba(vectorized_message)[0][1]
     rf_probability = rf_model.predict_proba(vectorized_message)[0][1]
@@ -40,8 +44,7 @@ def predict_spam(message):
         "Random Forest": ("Spam" if rf_prediction[0] == 1 else "Not Spam", rf_probability)
     }
 
-
-
+# Initialize Flask app
 app = Flask(__name__)
     
 @app.route("/")
